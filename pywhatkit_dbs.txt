@@ -1,0 +1,171 @@
+--------------------
+Date: 1:5:2021
+Time: 13:13
+Phone number: +972 54-750-0869
+Message: שלום
+--------------------
+Date: 1:5:2021
+Time: 13:15
+Phone number: +972 54-750-0869
+Message: שלום
+--------------------
+Date: 1:5:2021
+Time: 13:17
+Phone number: +972 54-750-0869
+Message: שלום
+--------------------
+Date: 1:5:2021
+Time: 13:20
+Phone number: +972 54-750-0869
+Message: שלום
+--------------------
+Date: 1:5:2021
+Time: 13:22
+Phone number: +972 54-750-0869
+Message: שלום
+--------------------
+Date: 1:5:2021
+Time: 13:26
+Phone number: +972 54-750-0869
+Message: שלום
+--------------------
+Date: 1:5:2021
+Time: 13:27
+Phone number: +972 54-750-0869
+Message: שלום
+--------------------
+Date: 1:5:2021
+Time: 13:50
+Phone number: +972 54-750-0869
+Message: שלום
+--------------------
+Date: 1:5:2021
+Time: 13:51
+Phone number: +972 54-750-0869
+Message: שלום
+--------------------
+Date: 1:5:2021
+Time: 13:52
+Phone number: +972 54-750-0869
+Message: שלום
+--------------------
+Date: 1:5:2021
+Time: 13:53
+Phone number: +972 54-750-0869
+Message: שלום
+--------------------
+Date: 1:5:2021
+Time: 13:59
+Phone number: +972 54-750-0869
+Message: שלום
+--------------------
+Date: 1:5:2021
+Time: 14:9
+Phone number: +972 54-750-0869
+Message: שלום
+--------------------
+Date: 1:5:2021
+Time: 14:12
+Phone number: +972 54-750-0869
+Message: שלום
+--------------------
+Date: 1:5:2021
+Time: 14:38
+Phone number: +972542323167
+Message: ['make', 'me', 'a', 'coffee']
+--------------------
+Date: 1:5:2021
+Time: 14:51
+Phone number: +972542323167
+Message: please make me a coffee
+--------------------
+Date: 1:5:2021
+Time: 14:53
+Phone number: +972 58-477-0076
+Message: this is python talking
+--------------------
+Date: 1:5:2021
+Time: 15:50
+Phone number: +972542323167
+Message: where is my coffee
+--------------------
+Date: 1:5:2021
+Time: 16:39
+Phone number: +972542323167
+Message: in hero make me a coffee
+--------------------
+Date: 1:5:2021
+Time: 16:39
+Phone number: +972542323167
+Message: תכין לי קפה
+--------------------
+Date: 1:5:2021
+Time: 16:40
+Phone number: +972542323167
+Message: in you google make me a coffee
+--------------------
+Date: 1:5:2021
+Time: 16:41
+Phone number: +972542323167
+Message: תכין לי קפה
+--------------------
+Date: 1:5:2021
+Time: 16:42
+Phone number: +972 58-350-1228
+Message: seen him do you want i've verified?
+--------------------
+Date: 1:5:2021
+Time: 16:48
+Phone number: +972 58-350-1228
+Message: אתה רוצה v v v?
+--------------------
+Date: 1:5:2021
+Time: 17:26
+Phone number: +972542323167
+Message: make me a coffee
+--------------------
+Date: 1:5:2021
+Time: 17:28
+Phone number: +972 58-477-0076
+Message: you are awesome
+--------------------
+Date: 1:5:2021
+Time: 17:29
+Phone number: +972542323167
+Message: אתה מדהים
+--------------------
+Date: 1:5:2021
+Time: 17:30
+Phone number: +972542323167
+Message: אתה מדהים
+--------------------
+Date: 1:5:2021
+Time: 17:37
+Phone number: +972 58-350-1228
+Message: you are a loser
+--------------------
+Date: 1:5:2021
+Time: 18:55
+Phone number: +972 50-321-9900
+Message: ככה עבדתי עלייך זה באמת הודעה
+--------------------
+Date: 1:5:2021
+Time: 18:56
+Phone number: +972542323167
+Message: איזה מגניב
+--------------------
+Date: 1:5:2021
+Time: 18:59
+Phone number: +972 58-477-0076
+Message: 
+--------------------
+Date: 1:5:2021
+Time: 18:60
+Phone number: +972 58-477-0076
+Message: 
+--------------------
+Date: 1:5:2021
+Time: 18:60
+Phone number: +972 58-477-0076
+Message: אתה מגניב
+--------------------
