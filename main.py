@@ -52,6 +52,7 @@ def hi_aviv():
         hi_aviv()
     return command
 
+
 def run_aviv():
     command = hi_aviv()
     if "נגן" in command:
