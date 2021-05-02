@@ -10,6 +10,7 @@ import pyjokes_hebrew
 
 
 
+
 numbers={
   "לאמא": "+972542323167",
   "לאלון": "+972 58-350-1228",
@@ -44,7 +45,6 @@ def hi_aviv():
             printGreen("listening... (:")
             voice = listener.listen(source)
             command = listener.recognize_google(voice, language="he")
-
             print(command)
 
     except:
@@ -59,6 +59,7 @@ def run_aviv():
         song = command.replace("נגן", "")
         songEn = trans(song)
         talk("aviv play " + songEn)
+
         pywhatkit.playonyt(song)
 
     elif "תרגם" in command:
@@ -101,7 +102,12 @@ def run_aviv():
         print(mesegTxt)
         print(numbers[person])
         pywhatkit.sendwhatmsg(numbers[person], mesegTxt, int(timeH), timeM1, 10)
-
-
+    elif "משוב" in command:
+        feedback = open("feedback.txt", "a")
+        feed = trans(command)
+        feedback.write("\n" + feed)
+        feedback.close()
 
 run_aviv()
+
+
