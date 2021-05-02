@@ -7,8 +7,15 @@ from color_printer import *
 import datetime
 import pyjokes_hebrew
 
+from tkinter import *
+import tkinter as tk
+
+root = tk.Tk()
+root.configure(background="#106030")
+root.title('משו"ב אוטומטי')
 
 
+#, command=openMashovAndClosPopUp
 
 
 numbers={
@@ -38,7 +45,7 @@ def talk(text):
     engine.say(text)
     engine.runAndWait()
 
-talk("Aviv Hears you")
+#talk("Aviv Hears you")
 def hi_aviv():
     try:
         with sr.Microphone() as source:
@@ -108,6 +115,10 @@ def run_aviv():
         feedback.write("\n" + feed)
         feedback.close()
 
-run_aviv()
+#run_aviv()
 
+startMashov = tk.Button(root, text='הפעלת משו"ב', padx=30, pady=15, fg="white", bg="#1c4f2b", command=run_aviv)#picture="C:\Users\avivv\Downloads\logo_students.png", command=masov()
+startMashov.pack()
 
+root.mainloop()
+#pyinstaller -F main.py --hidden-import=pyttsx3.drivers --hidden-import=pyttsx3.drivers.dummy --hidden-import=pyttsx3.drivers.espeak --hidden-import=pyttsx3.drivers.nsss --hidden-import=pyttsx3.drivers.sapi5
