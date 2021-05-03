@@ -11,11 +11,13 @@ from tkinter import *
 import tkinter as tk
 
 root = tk.Tk()
-root.configure(background="#106030")
-root.title('משו"ב אוטומטי')
+root.configure(background="#4285f4")
+root.title('היי אביב')
 
 
 #, command=openMashovAndClosPopUp
+
+printComm = ""
 
 
 numbers={
@@ -47,6 +49,7 @@ def talk(text):
 
 #talk("Aviv Hears you")
 def hi_aviv():
+    global printComm
     try:
         with sr.Microphone() as source:
             printGreen("listening... (:")
@@ -57,11 +60,14 @@ def hi_aviv():
     except:
         print("ops")
         hi_aviv()
+
+    printComm = command
     return command
 
 
 def run_aviv():
     command = hi_aviv()
+
     if "נגן" in command:
         song = command.replace("נגן", "")
         songEn = trans(song)
@@ -115,10 +121,30 @@ def run_aviv():
         feedback.write("\n" + feed)
         feedback.close()
 
-#run_aviv()
 
-startMashov = tk.Button(root, text='הפעלת משו"ב', padx=30, pady=15, fg="white", bg="#1c4f2b", command=run_aviv)#picture="C:\Users\avivv\Downloads\logo_students.png", command=masov()
-startMashov.pack()
+def strat():
+
+    run_aviv()
+    inputprintComm.configure(text=printComm)
+    print(printComm)
+
+canvass = tk.Canvas(root, width=300, height=150, background="#4285f4", highlightthickness=0)
+
+canvass.pack()
+
+idFrame = tk.Frame(canvass, bg="#4285f4")
+idFrame.place(height=150, width=300)
+
+
+inputprintComm = Label(idFrame, text=printComm + "", bg="#4285f4", fg="white")
+inputprintComm.pack()
+
+
+photo = PhotoImage(file = "C:\\Users\\avivv\Pictures\\20210421_163757.png")
+startAviv = tk.Button(idFrame, image=photo, text='הפעלת אביב', padx=30, pady=15, fg="white", bg="#1c4f2b", command=strat)#picture="C:\Users\avivv\Downloads\logo_students.png", command=masov()
+startAviv.pack()
+
+
 
 root.mainloop()
 #pyinstaller -F main.py --hidden-import=pyttsx3.drivers --hidden-import=pyttsx3.drivers.dummy --hidden-import=pyttsx3.drivers.espeak --hidden-import=pyttsx3.drivers.nsss --hidden-import=pyttsx3.drivers.sapi5
