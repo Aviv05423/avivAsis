@@ -10,15 +10,13 @@ import pyjokes_hebrew
 from tkinter import *
 import tkinter as tk
 
-root = tk.Tk()
-root.configure(background="#4285f4")
-root.title('היי אביב')
+from chake import *
+import chake
 
 
 #, command=openMashovAndClosPopUp
 
 printComm = ""
-
 
 numbers={
   "לאמא": "+972542323167",
@@ -47,11 +45,12 @@ def talk(text):
     engine.say(text)
     engine.runAndWait()
 
-#talk("Aviv Hears you")
+
 def hi_aviv():
     global printComm
     try:
         with sr.Microphone() as source:
+            talk("Aviv Hears you")
             printGreen("listening... (:")
             voice = listener.listen(source)
             command = listener.recognize_google(voice, language="he")
@@ -71,12 +70,14 @@ def run_aviv():
     if "נגן" in command:
         song = command.replace("נגן", "")
         songEn = trans(song)
+        processing_label_confi("מנגן" + song)
         talk("aviv play " + songEn)
 
         pywhatkit.playonyt(song)
 
     elif "תרגם" in command:
         text = command.replace("תרגם", "")
+        processing_label_confi(text)
         talk(trans(text))
 
     elif "פתח" in command or "תפתח" in command:
@@ -85,12 +86,15 @@ def run_aviv():
         #if 'league' in openApp:
          #   subprocess.Popen(["C:\\Users\\avivv\Desktop\League of Legends.lnk"])
         if "גוגל" in openApp:
+            processing_label_confi("פותח גוגל")
             talk("opening google")
             subprocess.Popen(["C:\Program Files\Google\Chrome Beta\Application\chrome.exe"])
         elif "דיסקורד" in openApp or "דיס" in openApp:
+            processing_label_confi("פותח דיסקורד")
             talk("opening discord")
             subprocess.Popen(["C:\\Users\\avivv\AppData\Local\Discord\\Update.exe"])
         elif "פוטושופ" in openApp:
+            processing_label_confi("פותח פוטושופ")
             talk("opening photoshop")
             subprocess.Popen(["C:\Program Files\Adobe\Adobe Photoshop 2020\photoshop.exe"])
 
@@ -98,6 +102,7 @@ def run_aviv():
             talk("Aviv does not recognize the software")
     elif "בדיחה" in command or "jokes" in command:
         joke = pyjokes_hebrew.get_random_joke()
+        processing_label_confi(joke)
         print(joke)
         talk(trans(joke))
     elif "מה אתה יכול לעשות" in command or "מה את יכולה לעשות" in command:
@@ -114,6 +119,7 @@ def run_aviv():
         print(person)
         print(mesegTxt)
         print(numbers[person])
+        processing_label_confi("שולח ווטצאפ " + person + " ההודעה:" + mesegTxt)
         pywhatkit.sendwhatmsg(numbers[person], mesegTxt, int(timeH), timeM1, 10)
     elif "משוב" in command:
         feedback = open("feedback.txt", "a")
@@ -123,28 +129,10 @@ def run_aviv():
 
 
 def strat():
-
     run_aviv()
-    inputprintComm.configure(text=printComm)
+    Main_label_confi(printComm)
     print(printComm)
 
-canvass = tk.Canvas(root, width=300, height=150, background="#4285f4", highlightthickness=0)
 
-canvass.pack()
-
-idFrame = tk.Frame(canvass, bg="#4285f4")
-idFrame.place(height=150, width=300)
-
-
-inputprintComm = Label(idFrame, text=printComm + "", bg="#4285f4", fg="white")
-inputprintComm.pack()
-
-
-photo = PhotoImage(file = "C:\\Users\\avivv\Pictures\\20210421_163757.png")
-startAviv = tk.Button(idFrame, image=photo, text='הפעלת אביב', padx=30, pady=15, fg="white", bg="#1c4f2b", command=strat)#picture="C:\Users\avivv\Downloads\logo_students.png", command=masov()
-startAviv.pack()
-
-
-
-root.mainloop()
+root(strat, "Dd")
 #pyinstaller -F main.py --hidden-import=pyttsx3.drivers --hidden-import=pyttsx3.drivers.dummy --hidden-import=pyttsx3.drivers.espeak --hidden-import=pyttsx3.drivers.nsss --hidden-import=pyttsx3.drivers.sapi5
