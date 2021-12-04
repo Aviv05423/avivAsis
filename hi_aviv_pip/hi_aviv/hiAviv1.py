@@ -13,38 +13,38 @@ import tkinter as tk
 from chake import *
 import chake
 
-
-#, command=openMashovAndClosPopUp
+# , command=openMashovAndClosPopUp
 
 printComm = ""
 
-numbers={
-  "לאמא": "+972542323167",
-  "לאלון": "+972 58-350-1228",
-  "לאחי": "+972 58-477-0076",
-  "לעידן": "+972 58-477-0076",
-  "לאחותי": "+972 50-321-9900",
-  "לליאור": "+972 50-321-9900",
+numbers = {
+    "לאמא": "+972542323167",
+    "לאלון": "+972 58-350-1228",
+    "לאחי": "+972 58-477-0076",
+    "לעידן": "+972 58-477-0076",
+    "לאחותי": "+972 50-321-9900",
+    "לליאור": "+972 50-321-9900",
 }
+
 
 def trans(text):
     return Translator().translate(text, dest="en").text
 
+    # subprocess.Popen(["notepad.exe", "feedback"])
 
 
-    #subprocess.Popen(["notepad.exe", "feedback"])
 def hiAviv():
     listener = sr.Recognizer()
     engine = pyttsx3.init()
     voices = engine.getProperty("voices")
     engine.setProperty('rate', 160)
     engine.setProperty("voice", voices[1].id)
-    #engine.setProperty('rate', voices[1].id, newVoiceRate)
+
+    # engine.setProperty('rate', voices[1].id, newVoiceRate)
 
     def talk(text):
         engine.say(text)
         engine.runAndWait()
-
 
     def hi_aviv():
         global printComm
@@ -63,7 +63,6 @@ def hiAviv():
 
         printComm = command
         return command
-
 
     def run_aviv():
         command = hi_aviv()
@@ -84,8 +83,8 @@ def hiAviv():
         elif "פתח" in command or "תפתח" in command:
             openApp = command.replace("פתח", "")
             openApp = openApp.replace("תפתח", "")
-            #if 'league' in openApp:
-             #   subprocess.Popen(["C:\\Users\\avivv\Desktop\League of Legends.lnk"])
+            # if 'league' in openApp:
+            #   subprocess.Popen(["C:\\Users\\avivv\Desktop\League of Legends.lnk"])
             if "גוגל" in openApp:
                 processing_label_confi("פותח גוגל")
                 talk("opening google")
@@ -128,13 +127,10 @@ def hiAviv():
             feedback.write("\n" + feed)
             feedback.close()
 
-
     def strat():
         run_aviv()
         Main_label_confi(printComm)
         print(printComm)
 
-
     root(strat, "Dd")
-hiAviv()
-#pyinstaller -F main.py --hidden-import=pyttsx3.drivers --hidden-import=pyttsx3.drivers.dummy --hidden-import=pyttsx3.drivers.espeak --hidden-import=pyttsx3.drivers.nsss --hidden-import=pyttsx3.drivers.sapi5
+# pyinstaller -F main.py --hidden-import=pyttsx3.drivers --hidden-import=pyttsx3.drivers.dummy --hidden-import=pyttsx3.drivers.espeak --hidden-import=pyttsx3.drivers.nsss --hidden-import=pyttsx3.drivers.sapi5
